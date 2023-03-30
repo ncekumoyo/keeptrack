@@ -6,7 +6,9 @@ import { ProjectState } from "./projects/state/projectTypes";
 import { initialProjectState } from "./projects/state/projectReducer";
 import { projectReducer } from "./projects/state/projectReducer";
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+  projectState: projectReducer,
+});
 
 export default function configureStore(preloadedState: any) {
   const middlewares = [ReduxThunk];
